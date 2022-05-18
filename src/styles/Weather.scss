@@ -1,0 +1,51 @@
+@use "./_colors" as *;
+
+.City {
+  text-transform: capitalize;
+}
+
+.ring {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid $blue;
+  .N,
+  .E,
+  .S,
+  .W {
+    font-size: 10px;
+    color: $light;
+    position: relative;
+  }
+
+  .arrows {
+    font-size: 40px;
+    position: relative;
+    top: -52px;
+    padding-bottom: 7px;
+  }
+  .N {
+    top: -10px;
+  }
+  .E {
+    top: 15px;
+    right: -41px;
+  }
+  .S {
+    bottom: -42px;
+  }
+  .W {
+    top: -15px;
+    left: -41px;
+  }
+}
+
+p {
+  margin: 4px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 4px;
+}
