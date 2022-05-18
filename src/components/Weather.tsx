@@ -4,9 +4,9 @@ export default function Weather({ loc, data }: any) {
   return (
     <div className="info">
       <div className="flex">
-        <h1 className="City">{loc}</h1>
+        <h1 className="City">{loc ? loc : data.name}</h1>
         <img
-          src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+          src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
           alt="icon"
         />
       </div>
