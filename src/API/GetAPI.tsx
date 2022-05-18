@@ -19,7 +19,7 @@ export async function FetchLatAndLon(
       .catch((error) => {
         console.log(error);
         setData();
-        setError(`Ups! Błąd w miejscowości.`)
+        setError(`Ups! Błąd w miejscowości.`);
       });
   }
 }
@@ -33,14 +33,13 @@ export function FetchLocalization(
 ) {
   if (lat && lon) {
     fetch(
-      `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${API_KEY}`
     )
       .then((result) => result.json())
       .then((data) => setLoc(data[0].local_names.pl))
       .catch((error) => {
         console.log(error);
-        setData();
-        setError(`Ups! Coś poszło nie tak. Error: ${error}`)
+        setError(`Ups! Coś poszło nie tak. Error: ${error}`);
       });
   }
 }
@@ -58,12 +57,11 @@ export async function GetData(
       .then((result) => result.json())
       .then((data) => {
         setData(data);
-        console.log(data);
       })
       .catch((error) => {
         console.log(error);
         setData();
-        setError(`Ups! Coś poszło nie tak. Error ${error}`)
+        setError(`Ups! Coś poszło nie tak. Error ${error}`);
       });
   }
 }
