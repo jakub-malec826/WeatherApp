@@ -1,7 +1,3 @@
-import { configKeys } from "./Keys"
-
-const API_KEY = configKeys.API_KEY;
-
 export async function FetchLatAndLon(
   loc: string,
   setLat: any,
@@ -11,7 +7,7 @@ export async function FetchLatAndLon(
 ) {
   if (loc) {
     await fetch(
-      `https://api.openweathermap.org/geo/1.0/direct?q=${loc}&limit=1&appid=${API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${loc}&limit=1&appid=${process.env.REACT_APP_API_KEY}`
     )
       .then((result) => result.json())
       .then((data) => {
@@ -35,7 +31,7 @@ export function FetchLocalization(
 ) {
   if (lat && lon) {
     fetch(
-      `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${process.env.REACT_APP_API_KEY}`
     )
       .then((result) => result.json())
       .then((data) => setLoc(data[0].local_names.pl))
@@ -54,7 +50,7 @@ export async function GetData(
 ) {
   if (lat && lon) {
     await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
     )
       .then((result) => result.json())
       .then((data) => {
