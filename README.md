@@ -1,13 +1,11 @@
 # Weather App
-
-This App was write with create-react-app
-
-Simple app to look on current weather in your City ( or any City you want )
-
-I used free API 'OpenWeatherApp' to get weather data
-
-#Stack
+ - create-react-app
  - Typescript
  - React, React Hooks
  - Sass
 
+#
+
+Prosta aplikacja z wykorzystaniem zewnętrznego API do sprawdzania danych pogodowych z miejscowości ( wpisanej manualnie bądź pobranej automatycznie ) 
+
+[Weather App](https://jakub-malec826.github.io/WeatherApp/)
