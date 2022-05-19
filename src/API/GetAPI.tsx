@@ -1,4 +1,6 @@
-const API_KEY = "ad0d8a2877418d10e97dd1cb0c35d1d1";
+import { configKeys } from "./Keys"
+
+const API_KEY = configKeys.API_KEY;
 
 export async function FetchLatAndLon(
   loc: string,
