@@ -1,9 +1,9 @@
 export async function FetchLatAndLon(
   loc: string,
-  setLat: any,
-  setLon: any,
-  setData: any,
-  setError: any
+  setLat: Function,
+  setLon: Function,
+  setData: Function,
+  setError: Function
 ) {
   if (loc) {
     await fetch(
@@ -25,9 +25,8 @@ export async function FetchLatAndLon(
 export function FetchLocalization(
   lat: number,
   lon: number,
-  setLoc: any,
-  setData: any,
-  setError: any
+  setLoc: Function,
+  setError: Function
 ) {
   if (lat && lon) {
     fetch(
@@ -45,8 +44,8 @@ export function FetchLocalization(
 export async function GetData(
   lat: number,
   lon: number,
-  setData: any,
-  setError: any
+  setData: Function,
+  setError: Function
 ) {
   if (lat && lon) {
     await fetch(

@@ -2,7 +2,12 @@ import { useState } from "react";
 
 import "../styles/CitySearch.scss";
 
-export default function LocationSearch({ setLoc, setFetchnig }: any) {
+type Props = {
+  setLoc: Function;
+  setFetching: Function;
+};
+
+export default function LocationSearch({ setLoc, setFetching }: Props) {
   const [loca, setLoca] = useState("");
 
   const handleChange = (e: any) => setLoca(e.target.value);
@@ -10,13 +15,13 @@ export default function LocationSearch({ setLoc, setFetchnig }: any) {
   const handleClick = () => {
     if (loca) {
       setLoc(loca);
-      setFetchnig(true);
+      setFetching(true);
       setLoca("");
     }
   };
 
   const handleUserCity = () => {
-    setFetchnig(false);
+    setFetching(false);
   };
 
   return (

@@ -13,7 +13,7 @@ function App() {
   const [lon, setLon] = useState(0);
   const [fetching, setFetchnig] = useState(true);
   const [data, setData] = useState();
-  const [error, setError] = useState("Ups! wpisz coś")
+  const [error, setError] = useState("Wyszukaj miejscowość");
 
   useEffect(() => {
     if (fetching && loc) {
@@ -23,19 +23,15 @@ function App() {
         setLat(position.coords.latitude);
         setLon(position.coords.longitude);
       });
-      FetchLocalization(lat, lon, setLoc, setData, setError);
+      FetchLocalization(lat, lon, setLoc, setError);
     }
     GetData(lat, lon, setData, setError);
   }, [fetching, loc, lat, lon]);
 
   return (
     <div className="App">
-      <LocationSearch
-        setLoc={setLoc}
-        setFetchnig={setFetchnig}
-        setData={setData}
-      />
-      {data ? <Weather loc={loc} data={data} />: <ErrorPage error={error}/>}
+      <LocationSearch setLoc={setLoc} setFetching={setFetchnig} />
+      {data ? <Weather loc={loc} data={data} /> : <ErrorPage error={error} />}
     </div>
   );
 }

@@ -1,6 +1,33 @@
 import "../styles/Weather.scss";
 
-export default function Weather({ loc, data }: any) {
+type Props = {
+  loc: string;
+  data: {
+    name: string;
+    weather: {
+      icon: string;
+    }[];
+    dt: number;
+    main: {
+      temp: number;
+      feels_like: number;
+      temp_max: number;
+      temp_min: number;
+      humidity: number;
+      pressure: number;
+    };
+    sys: {
+      sunrise: number;
+      sunset: number;
+    };
+    wind: {
+      speed: number;
+      deg: number;
+    };
+  };
+};
+
+export default function Weather({ loc, data }: Props) {
   return (
     <div className="info">
       <div className="flex">
