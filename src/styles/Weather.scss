@@ -9,6 +9,7 @@
   height: 80px;
   border-radius: 50%;
   border: 2px solid $blue;
+  background-color: $ringBackground;
   .N,
   .E,
   .S,
@@ -21,22 +22,22 @@
   .arrows {
     font-size: 40px;
     position: relative;
-    top: -52px;
+    top: -1.25em;
     padding-bottom: 7px;
   }
   .N {
-    top: -10px;
+    top: -1em;
   }
   .E {
-    top: 15px;
-    right: -41px;
+    top: 1.5em;
+    right: -4.1em;
   }
   .S {
-    bottom: -42px;
+    bottom: -4.2em;
   }
   .W {
-    top: -15px;
-    left: -41px;
+    top: -1.5em;
+    left: -4.1em;
   }
 }
 
