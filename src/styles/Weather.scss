@@ -10,33 +10,38 @@
   border-radius: 50%;
   border: 2px solid $blue;
   background-color: $ringBackground;
+  position: relative;
   .N,
   .E,
   .S,
   .W {
     font-size: 10px;
     color: $light;
-    position: relative;
+    position: absolute;
   }
 
   .arrows {
     width: 16px;
-    position: relative;
-    top: -2.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -8px;
   }
   .N {
-    top: -1em;
+    top: -10%;
+    left: 40%;
   }
-  .E {
-    top: 1.5em;
-    right: -4.1em;
+  .E{
+    top: 40%;
+    left: 90%;
   }
-  .S {
-    bottom: -4.2em;
+  .S{
+    top: 90%;
+    left: 40%;
   }
-  .W {
-    top: -1.5em;
-    left: -4.1em;
+  .W{
+    top: 40%;
+    left: -10%;
   }
 }
 
