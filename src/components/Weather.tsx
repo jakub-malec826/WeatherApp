@@ -1,4 +1,5 @@
 import "../styles/Weather.scss";
+import arrow from "../graph/arrow.png";
 
 type Props = {
   loc: string;
@@ -69,12 +70,12 @@ export default function Weather({ loc, data }: Props) {
           <p className="E">E</p>
           <p className="S">S</p>
           <p className="W">W</p>
-          <p
+          <img
+            src={arrow}
+            alt="arrow"
             className="arrows"
             style={{ transform: `rotate(${data.wind.deg}deg)` }}
-          >
-            &#x2191;
-          </p>
+          />
         </div>
       </div>
       <div className="flex">
